@@ -1,24 +1,53 @@
 #!/usr/bin/env python3
 """
-State of the Union Speech Sentiment Analysis
-Reads speeches from a CSV file and performs sentiment analysis
+Analyze the 2003 and 2004 State of the Union speeches
 """
 
 from transformers import pipeline
 import pandas as pd
-import sys
-import os
+import re
 
-def analyze_speech_sentiment(speech_text, chunk_size=512):
-   
-    # Using a robust sentiment analysis model
-    sentiment_analyzer = pipeline(
-        "sentiment-analysis",
-        model="distilbert-base-uncased-finetuned-sst-2-english"
-    )
+def clean_speech_text(text):
+    """
+    Remove annotations like (applause), [laughter], etc. from speech text.
+    
+    Args:
+        text: Raw speech text
+    
+    Returns:
+        Cleaned text without annotations
+    """
+    # Remove text in parentheses: (applause), (laughter), etc.
+    text = re.sub(r'\([^)]*\)', '', text)
+    
+    # Remove text in square brackets: [applause], [laughter], etc.
+    text = re.sub(r'\[[^\]]*\]', '', text)
+    
+    # Remove extra whitespace
+    text = re.sub(r'\s+', ' ', text)
+    
+    return text.strip()
+
+def analyze_speech_sentiment(speech_text):
+    """
+    Analyze sentiment of a State of the Union speech.
+    
+    Args:
+        speech_text: The full text of the speech
+    
+    Returns:
+        Dictionary with overall sentiment and detailed results
+    """
+    # Clean the text first
+    print("  Cleaning text (removing annotations like (applause), [laughter], etc.)...")
+    cleaned_text = clean_speech_text(speech_text)
+    print(f"  Original text length: {len(speech_text)} characters")
+    print(f"  Cleaned text length: {len(cleaned_text)} characters")
     
     # Split speech into sentences for more granular analysis
-    sentences = [s.strip() for s in speech_text.split('.') if s.strip()]
+    sentences = [s.strip() for s in cleaned_text.split('.') if s.strip()]
+    
+    print(f"  Analyzing {len(sentences)} sentences...")
     
     results = []
     positive_count = 0
@@ -42,9 +71,13 @@ def analyze_speech_sentiment(speech_text, chunk_size=512):
                 else:
                     negative_count += 1
                     negative_scores.append(result['score'])
+                
+                # Show progress every 50 sentences
+                if (i + 1) % 50 == 0:
+                    print(f"    Processed {i + 1} sentences...")
                     
             except Exception as e:
-                print(f"Error analyzing sentence {i}: {e}")
+                print(f"  Error analyzing sentence {i}: {e}")
     
     # Calculate overall statistics
     total_analyzed = positive_count + negative_count
@@ -62,129 +95,146 @@ def analyze_speech_sentiment(speech_text, chunk_size=512):
         'negative_percentage': negative_percentage,
         'avg_positive_confidence': avg_positive_confidence,
         'avg_negative_confidence': avg_negative_confidence,
-        'overall_sentiment': 'POSITIVE' if positive_percentage > negative_percentage else 'NEGATIVE',
         'detailed_results': results
     }
 
-def analyze_csv(csv_file, text_column='speech', output_file=None):
-    """
-    Analyze sentiments for all speeches in a CSV file.
+def print_speech_results(speech_info, analysis):
+    """Print results for a single speech"""
+    print("\n" + "="*60)
+    print("SENTIMENT ANALYSIS RESULTS")
+    print("="*60)
+    print(f"President: {speech_info['President']}")
+    print(f"Year: {speech_info['Year']}")
+    print(f"Title: {speech_info['Title']}")
+    print("-"*60)
+    print(f"Total sentences analyzed: {analysis['total_sentences']}")
+    print(f"\nPositive sentences: {analysis['positive_count']} ({analysis['positive_percentage']:.1f}%)")
+    print(f"Negative sentences: {analysis['negative_count']} ({analysis['negative_percentage']:.1f}%)")
+    print(f"\nAverage positive confidence: {analysis['avg_positive_confidence']:.3f}")
+    print(f"Average negative confidence: {analysis['avg_negative_confidence']:.3f}")
     
-    Args:
-        csv_file: Path to CSV file
-        text_column: Name of the column containing speech text
-        output_file: Optional path to save results CSV
+    # Overall sentiment
+    if analysis['positive_percentage'] > analysis['negative_percentage']:
+        overall = "POSITIVE"
+    elif analysis['negative_percentage'] > analysis['positive_percentage']:
+        overall = "NEGATIVE"
+    else:
+        overall = "NEUTRAL"
     
-    Returns:
-        DataFrame with sentiment analysis results
-    """
-    print(f"Reading CSV file: {csv_file}")
-    df = pd.read_csv(csv_file)
+    print(f"\nOverall speech sentiment: {overall}")
+    print("="*60)
     
-    if text_column not in df.columns:
-        print(f"\nError: Column '{text_column}' not found in CSV.")
-        print(f"Available columns: {', '.join(df.columns)}")
-        return None
+    # Show most positive and negative sentences
+    sorted_results = sorted(
+        analysis['detailed_results'],
+        key=lambda x: x['score'],
+        reverse=True
+    )
     
-    print(f"Found {len(df)} speeches to analyze")
-    print("Loading sentiment analysis model...")
+    print("\nTOP 3 MOST POSITIVE SENTENCES")
+    print("-"*60)
+    positive_sentences = [r for r in sorted_results if r['label'] == 'POSITIVE'][:3]
+    for i, result in enumerate(positive_sentences, 1):
+        print(f"\n{i}. {result['sentence'][:150]}...")
+        print(f"   Confidence: {result['score']:.3f}")
     
-    # Store results
-    results = []
-    
-    for idx, row in df.iterrows():
-        speech_text = str(row[text_column])
-        
-        print(f"\n{'='*60}")
-        print(f"Analyzing speech {idx + 1}/{len(df)}")
-        
-        # Show other columns if they exist (like year, president, etc.)
-        for col in df.columns:
-            if col != text_column:
-                print(f"{col}: {row[col]}")
-        print('='*60)
-        
-        # Analyze sentiment
-        analysis = analyze_speech_sentiment(speech_text)
-        
-        # Create result dictionary with all original columns plus sentiment data
-        result = row.to_dict()
-        result['total_sentences'] = analysis['total_sentences']
-        result['positive_count'] = analysis['positive_count']
-        result['negative_count'] = analysis['negative_count']
-        result['positive_percentage'] = round(analysis['positive_percentage'], 2)
-        result['negative_percentage'] = round(analysis['negative_percentage'], 2)
-        result['avg_positive_confidence'] = round(analysis['avg_positive_confidence'], 3)
-        result['avg_negative_confidence'] = round(analysis['avg_negative_confidence'], 3)
-        result['overall_sentiment'] = analysis['overall_sentiment']
-        
-        results.append(result)
-        
-        # Print summary
-        print(f"\nResults:")
-        print(f"  Total sentences: {analysis['total_sentences']}")
-        print(f"  Positive: {analysis['positive_count']} ({analysis['positive_percentage']:.1f}%)")
-        print(f"  Negative: {analysis['negative_count']} ({analysis['negative_percentage']:.1f}%)")
-        print(f"  Overall sentiment: {analysis['overall_sentiment']}")
-    
-    # Create results dataframe
-    results_df = pd.DataFrame(results)
-    
-    # Save to file if specified
-    if output_file:
-        results_df.to_csv(output_file, index=False)
-        print(f"\n{'='*60}")
-        print(f"Results saved to: {output_file}")
-        print('='*60)
-    
-    return results_df
-
-def print_summary_statistics(results_df):
-    """Print overall summary statistics across all speeches"""
-    print(f"\n{'='*60}")
-    print("OVERALL SUMMARY STATISTICS")
-    print('='*60)
-    print(f"Total speeches analyzed: {len(results_df)}")
-    print(f"\nAverage positive percentage: {results_df['positive_percentage'].mean():.2f}%")
-    print(f"Average negative percentage: {results_df['negative_percentage'].mean():.2f}%")
-    print(f"\nMost positive speech: {results_df['positive_percentage'].max():.2f}%")
-    print(f"Most negative speech: {results_df['negative_percentage'].max():.2f}%")
-    
-    overall_positive = (results_df['overall_sentiment'] == 'POSITIVE').sum()
-    overall_negative = (results_df['overall_sentiment'] == 'NEGATIVE').sum()
-    print(f"\nSpeeches with positive sentiment: {overall_positive}")
-    print(f"Speeches with negative sentiment: {overall_negative}")
-    print('='*60)
+    print("\n" + "-"*60)
+    print("TOP 3 MOST NEGATIVE SENTENCES")
+    print("-"*60)
+    negative_sentences = [r for r in sorted_results if r['label'] == 'NEGATIVE'][:3]
+    for i, result in enumerate(negative_sentences, 1):
+        print(f"\n{i}. {result['sentence'][:150]}...")
+        print(f"   Confidence: {result['score']:.3f}")
+    print()
 
 def main():
-    if len(sys.argv) < 2:
-        print("Usage: python sentiment_csv.py <csv_file> [text_column] [output_file]")
-        print("\nExample:")
-        print("  python sentiment_csv.py speeches.csv")
-        print("  python sentiment_csv.py speeches.csv speech_text")
-        print("  python sentiment_csv.py speeches.csv speech_text results.csv")
-        print("\nThe CSV should have at least one column with the speech text.")
-        print("By default, it looks for a column named 'speech'.")
-        return
+    global sentiment_analyzer
     
-    csv_file = sys.argv[1]
-    text_column = sys.argv[2] if len(sys.argv) > 2 else 'speech'
-    output_file = sys.argv[3] if len(sys.argv) > 3 else None
+    print("Reading SOTU_data_final.csv...")
     
-    if not os.path.exists(csv_file):
-        print(f"Error: File '{csv_file}' not found!")
-        return
+    df = pd.read_csv('SOTU_data_final.csv', 
+                     quotechar='"',
+                     encoding='utf-8',
+                     on_bad_lines='skip')
     
-    # Analyze all speeches
-    results_df = analyze_csv(csv_file, text_column, output_file)
+    print(f"Successfully read CSV with {len(df)} speeches\n")
     
-    if results_df is not None:
-        # Print summary statistics
-        print_summary_statistics(results_df)
+    # Load the model once for both analyses
+    print("Loading sentiment analysis model...")
+    sentiment_analyzer = pipeline(
+        "sentiment-analysis",
+        model="distilbert-base-uncased-finetuned-sst-2-english"
+    )
+    print("Model loaded!\n")
+    
+    # Years to analyze
+    years_to_analyze = [2003, 2004]
+    
+    results_summary = []
+    
+    for year in years_to_analyze:
+        # Filter for the year
+        speech_df = df[df['Year'] == year]
         
-        # Show preview of results
-        print("\nResults preview:")
-        print(results_df[['positive_percentage', 'negative_percentage', 'overall_sentiment']].head())
+        if len(speech_df) == 0:
+            print(f"Warning: No speech found for year {year}!")
+            continue
+        
+        # Get the speech
+        speech = speech_df.iloc[0]
+        
+        print("="*60)
+        print(f"ANALYZING {year} STATE OF THE UNION SPEECH")
+        print("="*60)
+        print(f"President: {speech['President']}")
+        print(f"Year: {speech['Year']}")
+        print(f"Title: {speech['Title']}")
+        print("="*60)
+        
+        # Get the text
+        text = str(speech['Text'])
+        
+        # Check if text is valid
+        if text == 'nan' or text == '' or len(text) < 100:
+            print(f"Error: Text appears to be empty or invalid (length: {len(text)})\n")
+            continue
+        
+        # Perform sentiment analysis
+        analysis = analyze_speech_sentiment(text)
+        
+        # Store summary
+        results_summary.append({
+            'year': year,
+            'president': speech['President'],
+            'positive_pct': analysis['positive_percentage'],
+            'negative_pct': analysis['negative_percentage'],
+            'total_sentences': analysis['total_sentences']
+        })
+        
+        # Print detailed results
+        print_speech_results(speech, analysis)
+    
+    # Print comparison
+    if len(results_summary) == 2:
+        print("\n" + "="*60)
+        print("COMPARISON: 2003 vs 2004")
+        print("="*60)
+        for result in results_summary:
+            print(f"\n{result['year']} ({result['president']}):")
+            print(f"  Positive: {result['positive_pct']:.1f}%")
+            print(f"  Negative: {result['negative_pct']:.1f}%")
+            print(f"  Total sentences: {result['total_sentences']}")
+        
+        # Show difference
+        diff = results_summary[1]['positive_pct'] - results_summary[0]['positive_pct']
+        print(f"\nChange from 2003 to 2004:")
+        if diff > 0:
+            print(f"  Positive sentiment INCREASED by {diff:.1f} percentage points")
+        elif diff < 0:
+            print(f"  Positive sentiment DECREASED by {abs(diff):.1f} percentage points")
+        else:
+            print(f"  No change in positive sentiment")
+        print("="*60)
 
 if __name__ == "__main__":
     main()
