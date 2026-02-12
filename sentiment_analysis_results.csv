@@ -1,0 +1,168 @@
+year,president,title,total_sentences,positive_count,negative_count,positive_percentage,negative_percentage,avg_positive_confidence,avg_negative_confidence,num_parts,total_characters,is_crisis,crisis_name,overall_sentiment,p25_threshold,p75_threshold
+1850,Millard Fillmore,First State of the Union Address,160,86,74,53.75,46.25,0.9489,0.9241,1,32767,0.0,,NEGATIVE,48.165,65.41
+1851,Millard Fillmore,Second State of the Union Address,157,65,92,41.4,58.6,0.9632,0.937,1,32767,0.0,,NEGATIVE,48.165,65.41
+1852,Millard Fillmore,Third State of the Union Address,158,71,87,44.94,55.06,0.9471,0.9543,1,32767,0.0,,NEGATIVE,48.165,65.41
+1853,Franklin Pierce,First State of the Union Address,142,83,59,58.45,41.55,0.9595,0.9411,1,32767,0.0,,POSITIVE,48.165,65.41
+1854,Franklin Pierce,Second State of the Union Address,154,65,89,42.21,57.79,0.9379,0.9348,1,32767,0.0,,NEGATIVE,48.165,65.41
+1855,Franklin Pierce,Third State of the Union Address,120,50,70,41.67,58.33,0.9437,0.9269,1,32767,0.0,,NEGATIVE,48.165,65.41
+1856,Franklin Pierce,Fourth State of the Union Address,118,37,81,31.36,68.64,0.927,0.9632,1,32767,0.0,,NEGATIVE,48.165,65.41
+1857,James Buchanan,First State of the Union Address,145,53,92,36.55,63.45,0.9601,0.9567,1,32767,1.0,Panic of 1857,NEGATIVE,48.165,65.41
+1858,James Buchanan,Second State of the Union Address,55,32,23,58.18,41.82,0.9682,0.9621,1,32767,1.0,Panic of 1857,POSITIVE,48.165,65.41
+1859,James Buchanan,Third State of the Union Address,24,11,13,45.83,54.17,0.8732,0.9318,1,32767,0.0,,NEGATIVE,48.165,65.41
+1860,James Buchanan,Fourth State of the Union Address,179,66,113,36.87,63.13,0.9405,0.9531,1,32767,0.0,,NEGATIVE,48.165,65.41
+1861,Abraham Lincoln,First State of the Union Address,165,63,102,38.18,61.82,0.9491,0.9401,1,32767,1.0,Civil War,NEGATIVE,48.165,65.41
+1862,Abraham Lincoln,Second State of the Union Address,211,87,124,41.23,58.77,0.9527,0.9418,1,32767,1.0,Civil War,NEGATIVE,48.165,65.41
+1863,Abraham Lincoln,Third State of the Union Address,190,90,100,47.37,52.63,0.9549,0.9278,1,32767,1.0,Civil War,NEGATIVE,48.165,65.41
+1864,Abraham Lincoln,Fourth State of the Union Address,208,110,98,52.88,47.12,0.9368,0.9158,1,32767,1.0,Civil War,NEGATIVE,48.165,65.41
+1865,Andrew Johnson,First State of the Union Address,169,89,80,52.66,47.34,0.9622,0.9651,1,32767,1.0,Recession,NEGATIVE,48.165,65.41
+1866,Andrew Johnson,Second State of the Union Address,156,87,69,55.77,44.23,0.9383,0.9181,1,32767,1.0,Recession,NEGATIVE,48.165,65.41
+1867,Andrew Johnson,Third State of the Union Address,184,65,119,35.33,64.67,0.9338,0.9591,1,32767,1.0,Recession,NEGATIVE,48.165,65.41
+1868,Andrew Johnson,Fourth State of the Union Address,164,71,93,43.29,56.71,0.9613,0.9612,1,32767,0.0,,NEGATIVE,48.165,65.41
+1869,Ulysses S. Grant,First State of the Union Address,168,77,91,45.83,54.17,0.9443,0.94,1,32767,1.0,Recession,NEGATIVE,48.165,65.41
+1870,Ulysses S. Grant,Second State of the Union Address,162,77,85,47.53,52.47,0.9502,0.9494,1,32767,1.0,Recession,NEGATIVE,48.165,65.41
+1871,Ulysses S. Grant,Third State of the Union Address,180,95,85,52.78,47.22,0.9561,0.9269,1,32767,0.0,,NEGATIVE,48.165,65.41
+1872,Ulysses S. Grant,Fourth State of the Union Address,160,93,67,58.13,41.88,0.9599,0.9272,1,32767,0.0,,POSITIVE,48.165,65.41
+1873,Ulysses S. Grant,Fifth State of the Union Address,151,72,79,47.68,52.32,0.9462,0.9411,1,32767,1.0,Panic of 1873 and long Depression,NEGATIVE,48.165,65.41
+1874,Ulysses S. Grant,Sixth State of the Union Address,158,70,88,44.3,55.7,0.9536,0.9395,1,32767,1.0,Panic of 1873 and long Depression,NEGATIVE,48.165,65.41
+1875,Ulysses S. Grant,Seventh State of the Union Address,148,74,74,50.0,50.0,0.9384,0.9539,1,32767,1.0,Panic of 1873 and long Depression,NEGATIVE,48.165,65.41
+1876,Ulysses S. Grant,Eighth State of the Union Address,151,64,87,42.38,57.62,0.9337,0.9371,1,32767,1.0,Panic of 1873 and long Depression,NEGATIVE,48.165,65.41
+1877,Rutherford B. Hayes,First State of the Union Address,136,76,60,55.88,44.12,0.9611,0.9484,1,32767,1.0,Panic of 1873 and long Depression,NEGATIVE,48.165,65.41
+1878,Rutherford B. Hayes,Second State of the Union Address,181,98,83,54.14,45.86,0.9425,0.9191,1,32767,1.0,Panic of 1873 and long Depression,NEGATIVE,48.165,65.41
+1879,Rutherford B. Hayes,Third State of the Union Address,151,81,70,53.64,46.36,0.9451,0.9448,1,32767,0.0,,NEGATIVE,48.165,65.41
+1880,Rutherford B. Hayes,Fourth State of the Union Address,154,95,59,61.69,38.31,0.9739,0.9306,1,32767,0.0,,POSITIVE,48.165,65.41
+1881,Chester A. Arthur,First State of the Union Address,189,102,87,53.97,46.03,0.9648,0.9385,1,32767,0.0,,NEGATIVE,48.165,65.41
+1882,Chester A. Arthur,Second State of the Union Address,174,88,86,50.57,49.43,0.9334,0.9604,1,32767,1.0,Recession,NEGATIVE,48.165,65.41
+1883,Chester A. Arthur,Third State of the Union Address,184,80,104,43.48,56.52,0.9438,0.927,1,32767,1.0,Recession,NEGATIVE,48.165,65.41
+1884,Chester A. Arthur,Fourth State of the Union Address,180,87,93,48.33,51.67,0.9509,0.9428,1,32767,1.0,Recession,NEGATIVE,48.165,65.41
+1885,Grover Cleveland,First State of the Union Address,143,83,60,58.04,41.96,0.9409,0.9411,1,32767,0.0,,POSITIVE,48.165,65.41
+1886,Grover Cleveland,Second State of the Union Address,150,72,78,48.0,52.0,0.9428,0.9584,1,32767,0.0,,NEGATIVE,48.165,65.41
+1887,Grover Cleveland,Third State of the Union Address,128,32,96,25.0,75.0,0.9021,0.9571,1,31742,0.0,,NEGATIVE,48.165,65.41
+1888,Grover Cleveland,Fourth State of the Union Address,32,19,13,59.38,40.62,0.9738,0.924,1,32767,0.0,,POSITIVE,48.165,65.41
+1890,Benjamin Harrison,Second State of the Union Address,188,112,76,59.57,40.43,0.9642,0.9377,1,32767,1.0,Recession,POSITIVE,48.165,65.41
+1891,Benjamin Harrison,Third State of the Union Address,150,63,87,42.0,58.0,0.9602,0.958,1,32767,0.0,,NEGATIVE,48.165,65.41
+1892,Benjamin Harrison,Fourth State of the Union Address,184,97,87,52.72,47.28,0.9356,0.9126,1,32767,0.0,,NEGATIVE,48.165,65.41
+1893,Grover Cleveland,Fifth State of the Union Address,174,87,87,50.0,50.0,0.9309,0.9246,1,32767,1.0,Panic of 1893,NEGATIVE,48.165,65.41
+1894,Grover Cleveland,Sixth State of the Union Address,182,61,121,33.52,66.48,0.9193,0.9379,1,32767,0.0,,NEGATIVE,48.165,65.41
+1895,Grover Cleveland,Seventh State of the Union Address,128,58,70,45.31,54.69,0.9011,0.9321,1,32767,1.0,Panic of 1896,NEGATIVE,48.165,65.41
+1896,Grover Cleveland,Eighth State of the Union Address,147,56,91,38.1,61.9,0.9209,0.9444,1,32767,1.0,Panic of 1896,NEGATIVE,48.165,65.41
+1897,William McKinley,First State of the Union Address,180,66,114,36.67,63.33,0.9583,0.9471,1,32767,0.0,,NEGATIVE,48.165,65.41
+1898,William McKinley,Second State of the Union Address,173,78,95,45.09,54.91,0.9272,0.9256,1,32767,0.0,,NEGATIVE,48.165,65.41
+1899,William McKinley,Third State of the Union Address,173,95,78,54.91,45.09,0.9611,0.9393,1,32767,1.0,Philippine-American War,NEGATIVE,48.165,65.41
+1900,William McKinley,Fourth State of the Union Address,191,94,97,49.21,50.79,0.9537,0.9488,1,32767,1.0,Philippine-American War,NEGATIVE,48.165,65.41
+1901,Theodore Roosevelt,First State of the Union Address,182,86,96,47.25,52.75,0.9571,0.964,1,32767,1.0,Philippine-American War,NEGATIVE,48.165,65.41
+1902,Theodore Roosevelt,Second State of the Union Address,176,95,81,53.98,46.02,0.955,0.9502,1,32767,1.0,Recession,NEGATIVE,48.165,65.41
+1903,Theodore Roosevelt,Third State of the Union Address,170,92,78,54.12,45.88,0.9556,0.9264,1,32767,1.0,Recession,NEGATIVE,48.165,65.41
+1904,Theodore Roosevelt,Fourth State of the Union Address,154,77,77,50.0,50.0,0.9418,0.9566,1,32767,0.0,,NEGATIVE,48.165,65.41
+1905,Theodore Roosevelt,Fifth State of the Union Address,159,63,96,39.62,60.38,0.9635,0.9604,1,32767,0.0,,NEGATIVE,48.165,65.41
+1906,Theodore Roosevelt,Sixth State of the Union Address,140,53,87,37.86,62.14,0.92,0.9538,1,32767,0.0,,NEGATIVE,48.165,65.41
+1907,Theodore Roosevelt,Seventh State of the Union Address,172,64,108,37.21,62.79,0.9403,0.955,1,32767,1.0,Panic of 1907,NEGATIVE,48.165,65.41
+1908,Theodore Roosevelt,Eighth State of the Union Address,166,57,109,34.34,65.66,0.9323,0.9548,1,32767,0.0,,NEGATIVE,48.165,65.41
+1909,William Howard Taft,First State of the Union Address,141,101,40,71.63,28.37,0.9585,0.9033,1,32767,0.0,,POSITIVE,48.165,65.41
+1910,William Howard Taft,Second State of the Union Address,145,100,45,68.97,31.03,0.9611,0.8956,1,32767,1.0,Panic of 1910-11,POSITIVE,48.165,65.41
+1911,William Howard Taft,Third State of the Union Address,4,3,1,75.0,25.0,0.9952,0.9522,1,32767,1.0,Panic of 1910-11,POSITIVE,48.165,65.41
+1912,William Howard Taft,Fourth State of the Union Address,145,98,47,67.59,32.41,0.9656,0.9122,1,32767,0.0,,POSITIVE,48.165,65.41
+1913,Woodrow Wilson,First State of the Union Address,108,59,49,54.63,45.37,0.9603,0.9638,1,20552,1.0,Recession,NEGATIVE,48.165,65.41
+1914,Woodrow Wilson,Second State of the Union Address,161,88,73,54.66,45.34,0.9711,0.9582,1,26086,1.0,"Recession, WWI",NEGATIVE,48.165,65.41
+1915,Woodrow Wilson,Third State of the Union Address,163,68,95,41.72,58.28,0.937,0.939,1,32767,1.0,WWI,NEGATIVE,48.165,65.41
+1916,Woodrow Wilson,Fourth State of the Union Address,52,26,26,50.0,50.0,0.9253,0.9514,1,13096,1.0,WWI,NEGATIVE,48.165,65.41
+1917,Woodrow Wilson,Fifth State of the Union Address,134,70,64,52.24,47.76,0.9555,0.9453,1,22485,1.0,WWI,NEGATIVE,48.165,65.41
+1918,Woodrow Wilson,Sixth State of the Union Address,150,70,80,46.67,53.33,0.9822,0.9522,1,32178,1.0,Recession,NEGATIVE,48.165,65.41
+1919,Woodrow Wilson,Seventh State of the Union Address,159,80,79,50.31,49.69,0.9696,0.9285,1,29228,0.0,,NEGATIVE,48.165,65.41
+1920,Woodrow Wilson,Eighth State of the Union Address,73,43,30,58.9,41.1,0.9787,0.9437,1,16651,1.0,Recession,POSITIVE,48.165,65.41
+1921,Warren G. Harding,First State of the Union Address,203,109,94,53.69,46.31,0.9408,0.9547,1,32767,0.0,,NEGATIVE,48.165,65.41
+1922,Warren G. Harding,Second State of the Union Address,210,93,117,44.29,55.71,0.9525,0.9364,1,32767,0.0,,NEGATIVE,48.165,65.41
+1923,Calvin Coolidge,First State of the Union Address,277,107,170,38.63,61.37,0.9128,0.951,1,32767,0.0,,NEGATIVE,48.165,65.41
+1925,Calvin Coolidge,Third State of the Union Address,238,81,157,34.03,65.97,0.9358,0.9537,1,32767,0.0,,NEGATIVE,48.165,65.41
+1926,Calvin Coolidge,Fourth State of the Union Address,233,86,147,36.91,63.09,0.9372,0.945,1,32767,1.0,Recession,NEGATIVE,48.165,65.41
+1927,Calvin Coolidge,Fifth State of the Union Address,279,96,183,34.41,65.59,0.9465,0.9658,1,32767,0.0,,NEGATIVE,48.165,65.41
+1928,Calvin Coolidge,Sixth State of the Union Address,245,142,103,57.96,42.04,0.9613,0.9328,1,32767,0.0,,POSITIVE,48.165,65.41
+1929,Herbert Hoover,First State of the Union Address,206,112,94,54.37,45.63,0.948,0.9413,1,32767,1.0,The Great Depression,NEGATIVE,48.165,65.41
+1930,Herbert Hoover,Second State of the Union Address,163,70,93,42.94,57.06,0.9582,0.9477,1,28809,1.0,The Great Depression,NEGATIVE,48.165,65.41
+1931,Herbert Hoover,Third State of the Union Address,220,123,97,55.91,44.09,0.9508,0.9368,1,32767,1.0,The Great Depression,NEGATIVE,48.165,65.41
+1932,Herbert Hoover,Fourth State of the Union Address,163,82,81,50.31,49.69,0.955,0.951,1,25488,1.0,The Great Depression,NEGATIVE,48.165,65.41
+1934,Franklin Delano Roosevelt,First State of the Union Address,75,49,26,65.33,34.67,0.9705,0.9677,1,13571,1.0,The Great Depression,POSITIVE,48.165,65.41
+1935,Franklin Delano Roosevelt,Second State of the Union Address,139,92,47,66.19,33.81,0.9592,0.9439,1,21281,1.0,The Great Depression,POSITIVE,48.165,65.41
+1936,Franklin Delano Roosevelt,Third State of the Union Address,147,88,59,59.86,40.14,0.965,0.9283,1,22361,1.0,The Great Depression,POSITIVE,48.165,65.41
+1937,Franklin Delano Roosevelt,Fourth State of the Union Address,106,64,42,60.38,39.62,0.9729,0.9638,1,16783,1.0,The Great Depression,POSITIVE,48.165,65.41
+1938,Franklin Delano Roosevelt,Fifth State of the Union Address,172,82,90,47.67,52.33,0.9539,0.9543,1,28154,1.0,"The Great Depression, Recession",NEGATIVE,48.165,65.41
+1939,Franklin Delano Roosevelt,Sixth State of the Union Address,169,84,85,49.7,50.3,0.9674,0.9137,1,22669,1.0,The Great Depression,NEGATIVE,48.165,65.41
+1940,Franklin Delano Roosevelt,Seventh State of the Union Address,122,73,49,59.84,40.16,0.958,0.9569,1,18789,1.0,WWII,POSITIVE,48.165,65.41
+1941,Franklin Delano Roosevelt,Eighth State of the Union Address,149,88,61,59.06,40.94,0.9754,0.9511,1,19499,1.0,WWII,POSITIVE,48.165,65.41
+1942,Franklin Delano Roosevelt,Ninth State of the Union Address,171,96,75,56.14,43.86,0.9493,0.9397,1,19987,1.0,WWII,NEGATIVE,48.165,65.41
+1943,Franklin Delano Roosevelt,Tenth State of the Union Address,198,118,80,59.6,40.4,0.9751,0.9543,1,26437,1.0,WWII,POSITIVE,48.165,65.41
+1944,Franklin Delano Roosevelt,Eleventh State of the Union Address,156,82,74,52.56,47.44,0.9525,0.9552,1,20001,1.0,WWII,NEGATIVE,48.165,65.41
+1945,Franklin Delano Roosevelt,Twelfth State of the Union Address,233,135,98,57.94,42.06,0.9555,0.9482,1,32767,1.0,WWII,POSITIVE,48.165,65.41
+1946,Harry S. Truman,First State of the Union Address,238,175,63,73.53,26.47,0.9668,0.9287,1,32767,0.0,,POSITIVE,48.165,65.41
+1947,Harry S. Truman,Second State of the Union Address,250,156,94,62.4,37.6,0.9504,0.9543,1,32767,0.0,,POSITIVE,48.165,65.41
+1948,Harry S. Truman,Third State of the Union Address,275,191,84,69.45,30.55,0.9676,0.9456,1,30765,0.0,,POSITIVE,48.165,65.41
+1949,Harry S. Truman,Fourth State of the Union Address,185,107,78,57.84,42.16,0.9629,0.9513,1,20932,1.0,Recession,POSITIVE,48.165,65.41
+1950,Harry S. Truman,Fifth State of the Union Address,236,172,64,72.88,27.12,0.972,0.9354,1,30550,0.0,,POSITIVE,48.165,65.41
+1951,Harry S. Truman,Sixth State of the Union Address,243,164,79,67.49,32.51,0.9845,0.9267,1,23084,1.0,Korean War,POSITIVE,48.165,65.41
+1952,Harry S. Truman,Seventh State of the Union Address,294,183,111,62.24,37.76,0.9621,0.9576,1,30403,1.0,Korean War,POSITIVE,48.165,65.41
+1953,Harry S. Truman,Eighth State of the Union Address,221,153,68,69.23,30.77,0.9643,0.9373,1,32767,1.0,Korean War,POSITIVE,48.165,65.41
+1953,Dwight D. Eisenhower,First State of the Union Address,249,145,104,58.23,41.77,0.9725,0.9289,1,32767,1.0,Korean War,POSITIVE,48.165,65.41
+1954,Dwight D. Eisenhower,Second State of the Union Address,251,169,82,67.33,32.67,0.9675,0.9338,1,32767,1.0,Recession,POSITIVE,48.165,65.41
+1955,Dwight D. Eisenhower,Third State of the Union Address,240,189,51,78.75,21.25,0.9704,0.9095,1,32767,0.0,,POSITIVE,48.165,65.41
+1956,Dwight D. Eisenhower,Fourth State of the Union Address,241,164,77,68.05,31.95,0.9704,0.9431,1,32767,0.0,,POSITIVE,48.165,65.41
+1957,Dwight D. Eisenhower,Fifth State of the Union Address (1957),188,129,59,68.62,31.38,0.9739,0.93,1,25954,0.0,,POSITIVE,48.165,65.41
+1958,Dwight D. Eisenhower,Sixth State of the Union Address,236,159,77,67.37,32.63,0.9709,0.9508,1,30598,1.0,"Vietnam War, Recession",POSITIVE,48.165,65.41
+1959,Dwight D. Eisenhower,Seventh State of the Union Address,260,165,95,63.46,36.54,0.9722,0.929,1,30818,0.0,,POSITIVE,48.165,65.41
+1960,Dwight D. Eisenhower,Eighth State of the Union Address,58,39,19,67.24,32.76,0.975,0.9367,1,32767,0.0,,POSITIVE,48.165,65.41
+1961,John F. Kennedy,First State of the Union Address,208,107,101,51.44,48.56,0.9654,0.9527,1,31747,1.0,"Vietnam War, Recession",NEGATIVE,48.165,65.41
+1961,Dwight D. Eisenhower,Ninth State of the Union Address,236,175,61,74.15,25.85,0.9794,0.913,1,32767,1.0,"Vietnam War, Recession",POSITIVE,48.165,65.41
+1962,John F. Kennedy,Second State of the Union Address,215,136,79,63.26,36.74,0.9749,0.9616,1,32767,0.0,,POSITIVE,48.165,65.41
+1963,John F. Kennedy,Third State of the Union Address,224,125,99,55.8,44.2,0.9733,0.9697,1,31823,0.0,,NEGATIVE,48.165,65.41
+1964,Lyndon Baines Johnson,First State of the Union Address,132,74,58,56.06,43.94,0.96,0.9366,1,18794,0.0,,NEGATIVE,48.165,65.41
+1965,Lyndon Baines Johnson,Second State of the Union Address,253,193,60,76.28,23.72,0.9732,0.9315,1,25824,1.0,Vietnam War,POSITIVE,48.165,65.41
+1966,Lyndon Baines Johnson,Third State of the Union Address,252,172,80,68.25,31.75,0.9579,0.9228,1,32216,1.0,Vietnam War,POSITIVE,48.165,65.41
+1967,Lyndon Baines Johnson,Fourth State of the Union Address,281,164,117,58.36,41.64,0.958,0.9399,1,32767,1.0,Vietnam War,POSITIVE,48.165,65.41
+1968,Lyndon Baines Johnson,Fifth State of the Union Address,254,163,91,64.17,35.83,0.9599,0.9143,1,29130,1.0,Vietnam War,POSITIVE,48.165,65.41
+1969,Lyndon Baines Johnson,Sixth State of the Union Address,204,135,69,66.18,33.82,0.9536,0.9223,1,23798,1.0,Vietnam War,POSITIVE,48.165,65.41
+1970,Richard Nixon,First State of the Union Address,190,124,66,65.26,34.74,0.9626,0.9576,1,24793,1.0,Vietnam War,POSITIVE,48.165,65.41
+1971,Richard Nixon,Second State of the Union Address,187,124,63,66.31,33.69,0.9582,0.9467,1,25873,1.0,Vietnam War,POSITIVE,48.165,65.41
+1972,Richard Nixon,Third State of the Union Address,172,127,45,73.84,26.16,0.9644,0.9615,1,23173,1.0,Vietnam War,POSITIVE,48.165,65.41
+1973,Richard Nixon,Fourth State of the Union Address,59,45,14,76.27,23.73,0.9846,0.9697,1,9814,1.0,Vietnam War,POSITIVE,48.165,65.41
+1974,Richard Nixon,Fifth State of the Union Address,205,152,53,74.15,25.85,0.9785,0.9428,1,29193,1.0,"Vietnam War, Recession",POSITIVE,48.165,65.41
+1975,Gerald Ford,First State of the Union Address,222,113,109,50.9,49.1,0.9606,0.9408,1,25086,1.0,"Vietnam War, Recession",NEGATIVE,48.165,65.41
+1976,Gerald Ford,Second State of the Union Address,273,155,118,56.78,43.22,0.9722,0.9436,1,29925,0.0,,POSITIVE,48.165,65.41
+1977,Gerald Ford,Third State of the Union Address,214,150,64,70.09,29.91,0.9759,0.9543,1,28485,0.0,,POSITIVE,48.165,65.41
+1978,Jimmy Carter,Jimmy Carter's First State of the Union Address,251,155,96,61.75,38.25,0.9778,0.9579,1,26758,0.0,,POSITIVE,48.165,65.41
+1979,Jimmy Carter,Jimmy Carter's Second State of the Union Address,159,108,51,67.92,32.08,0.9653,0.9473,1,19802,0.0,,POSITIVE,48.165,65.41
+1980,Jimmy Carter,Jimmy Carter's Third State of the Union Address,164,111,53,67.68,32.32,0.9824,0.9526,1,20196,1.0,Recession,POSITIVE,48.165,65.41
+1981,Jimmy Carter,Jimmy Carter's Fourth State of the Union Address,196,134,62,68.37,31.63,0.9573,0.924,1,32767,0.0,,POSITIVE,48.165,65.41
+1987,Ronald Reagan,Ronald Reagan's Sixth State of the Union Address,205,127,78,61.95,38.05,0.97,0.932,1,22960,0.0,,POSITIVE,48.165,65.41
+1989,George Herbert Walker Bush,George H. W. Bush's First State of the Union Address,290,193,97,66.55,33.45,0.9641,0.929,1,27923,0.0,,POSITIVE,48.165,65.41
+1990,George Herbert Walker Bush,George H. W. Bush's Second State of the Union Address,236,190,46,80.51,19.49,0.9774,0.9161,1,21813,0.0,,POSITIVE,48.165,65.41
+1991,George Herbert Walker Bush,George H. W. Bush's Third State of the Union Address,231,162,69,70.13,29.87,0.9763,0.9309,1,22617,1.0,Early 90s recession,POSITIVE,48.165,65.41
+1992,George Herbert Walker Bush,George H. W. Bush's Fourth State of the Union Address,318,179,139,56.29,43.71,0.9563,0.9451,1,28682,0.0,,NEGATIVE,48.165,65.41
+1993,Bill Clinton,William Jefferson Clinton's First State of the Union Address,242,138,104,57.02,42.98,0.9598,0.9556,1,32767,0.0,,POSITIVE,48.165,65.41
+1994,Bill Clinton,William Jefferson Clinton's Second State of the Union Address,310,166,144,53.55,46.45,0.9724,0.9633,1,32767,0.0,,NEGATIVE,48.165,65.41
+1995,Bill Clinton,William Jefferson Clinton's Third State of the Union Address,287,151,136,52.61,47.39,0.965,0.964,1,32767,0.0,,NEGATIVE,48.165,65.41
+1996,Bill Clinton,William Jefferson Clinton's Fourth State of the Union Address,320,203,117,63.44,36.56,0.9681,0.9616,1,32767,0.0,,POSITIVE,48.165,65.41
+1997,Bill Clinton,William Jefferson Clinton's Fifth State of the Union Address,253,176,77,69.57,30.43,0.9721,0.9187,1,32767,0.0,,POSITIVE,48.165,65.41
+1998,Bill Clinton,William Jefferson Clinton's Sixth State of the Union Address,332,211,121,63.55,36.45,0.9662,0.9607,1,32767,0.0,,POSITIVE,48.165,65.41
+1999,Bill Clinton,William Jefferson Clinton's Seventh State of the Union Address,293,188,105,64.16,35.84,0.978,0.9472,1,32767,0.0,,POSITIVE,48.165,65.41
+2000,Bill Clinton,William Jefferson Clinton's Eighth State of the Union Address,312,205,107,65.71,34.29,0.9704,0.9355,1,32767,0.0,,POSITIVE,48.165,65.41
+2001,George W. Bush,George Walker Bush's First State of the Union Address,280,169,111,60.36,39.64,0.9786,0.9469,1,25553,0.0,,POSITIVE,48.165,65.41
+2002,George W. Bush,George Walker Bush's Second State of the Union Address,214,135,79,63.08,36.92,0.9623,0.9337,1,22954,1.0,The War on Terror / Post 9/11,POSITIVE,48.165,65.41
+2003,George W. Bush,George Walker Bush's Third State of the Union Address,289,163,126,56.4,43.6,0.9701,0.9332,1,32125,1.0,The War on Terror / Post 9/11,POSITIVE,48.165,65.41
+2004,George W. Bush,George Walker Bush's Fourth State of the Union Address,280,169,111,60.36,39.64,0.9695,0.9331,1,30862,0.0,,POSITIVE,48.165,65.41
+2005,George W. Bush,George Walker Bush's Fifth State of the Union Address,236,162,74,68.64,31.36,0.9728,0.9279,1,30060,0.0,,POSITIVE,48.165,65.41
+2006,George W. Bush,George Walker Bush's Sixth State of the Union Address,268,176,92,65.67,34.33,0.9754,0.9302,1,31717,0.0,,POSITIVE,48.165,65.41
+2007,George W. Bush,George Walker Bush's Seventh State of the Union Address,49,36,13,73.47,26.53,0.972,0.8549,1,32767,0.0,,POSITIVE,48.165,65.41
+2008,George W. Bush,George Walker Bush's Eighth State of the Union Address,79,55,24,69.62,30.38,0.967,0.9236,1,32767,1.0,The Great Recession,POSITIVE,48.165,65.41
+2009,Barack Obama,Barack Obama's First State of the Union Address,279,169,110,60.57,39.43,0.9745,0.9635,1,32767,1.0,The Great Recession,POSITIVE,48.165,65.41
+2012,Barack Obama,Barack Obama's Fourth State of the Union Address,215,93,122,43.26,56.74,0.9567,0.9549,1,32767,0.0,,NEGATIVE,48.165,65.41
+2013,Barack Obama,Barack Obama's Fifth State of the Union Address,269,175,94,65.06,34.94,0.9697,0.9539,1,32767,0.0,,POSITIVE,48.165,65.41
+2014,Barack Obama,Barack Obama's Sixth State of the Union Address,343,207,136,60.35,39.65,0.971,0.9373,1,40168,0.0,,POSITIVE,48.165,65.41
+2015,Barack Obama,Barack Obama's Seventh State of the Union Address,294,187,107,63.61,36.39,0.9624,0.9453,1,32767,0.0,,POSITIVE,48.165,65.41
+2016,Barack Obama,Barack Obama's Eighth State of the Union Address,294,164,130,55.78,44.22,0.9602,0.9747,1,31564,0.0,,NEGATIVE,48.165,65.41
+2017,Donald Trump,Donald Trump's First State of the Union Address,276,181,95,65.58,34.42,0.9792,0.9534,1,29578,0.0,,POSITIVE,48.165,65.41
+2018,Donald Trump,Donald Trump's Second State of the Union Address,320,216,104,67.5,32.5,0.9772,0.944,1,30560,0.0,,POSITIVE,48.165,65.41
+2019,Donald Trump,Donald Trump's Third State of the Union Address,289,199,90,68.86,31.14,0.978,0.9421,1,31101,0.0,,POSITIVE,48.165,65.41
+2020,Donald Trump,Donald Trump's Fourth State of the Union Address,59,41,18,69.49,30.51,0.989,0.9375,2,4877,0.0,,POSITIVE,48.165,65.41
+2021,Joe Biden,Joe Biden's First State of the Union Address,155,80,75,51.61,48.39,0.9605,0.9589,2,13933,0.0,,NEGATIVE,48.165,65.41
+2022,Joe Biden,Joe Biden's Second State of the Union Address,321,180,141,56.07,43.93,0.9654,0.9423,2,43786,0.0,,NEGATIVE,48.165,65.41
+2023,Joe Biden,Joe Biden's Third State of the Union Address,249,163,86,65.46,34.54,0.9717,0.9474,2,18501,0.0,,POSITIVE,48.165,65.41
+2024,Joe Biden,Joe Biden's Fourth State of the Union Address,179,117,62,65.36,34.64,0.9529,0.9277,2,14051,0.0,,POSITIVE,48.165,65.41
+2025,Donald Trump,Donald Trump's Fifth State of the Union Address,710,443,267,62.39,37.61,0.9812,0.9584,2,57318,0.0,,POSITIVE,48.165,65.41
