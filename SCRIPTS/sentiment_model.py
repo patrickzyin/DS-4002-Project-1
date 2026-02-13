@@ -1,15 +1,3 @@
-#!/usr/bin/env python3
-"""
-Sentiment Analysis of State of the Union Speeches (1850-2025)
-
-This script analyzes the sentiment of all SOTU speeches by:
-1. Reading speeches from a CSV file
-2. Cleaning the text (removing applause, laughter annotations)
-3. Analyzing each sentence as positive or negative
-4. Calculating overall sentiment percentages
-5. Saving results to a CSV file
-"""
-
 from transformers import pipeline
 import pandas as pd
 import re

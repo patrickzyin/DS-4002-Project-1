@@ -1,15 +1,3 @@
-#!/usr/bin/env python3
-"""
-Statistical Analysis: Crisis vs Non-Crisis State of the Union Speeches
-
-This script:
-1. Loads sentiment analysis results
-2. Compares crisis vs non-crisis speeches
-3. Performs two-sample t-test
-4. Creates visualizations (separate images)
-5. Saves summary report
-"""
-
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
