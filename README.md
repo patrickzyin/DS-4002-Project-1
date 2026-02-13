@@ -115,3 +115,15 @@ pip install -r requirements.txt
 
 
 
+
+## Section 5: References
+
+[1]	National Bureau of Economic Research, “US Business Cycle Expansions and Contractions,” nber.org. https://www.nber.org/research/data/us-business-cycle-expansions-and-contractions (accessed Feb. 4, 2026).
+[2]	Federal Reserve Bank of St. Louis, “Recession Bars,” FRED Help. https://fredhelp.stlouisfed.org/fred/data/understanding-the-data/recession-bars/ (accessed Feb. 4, 2026).
+[3] 	U.S. Department of Veterans Affairs, “America’s Wars,” department.va.gov. https://department.va.gov/americas-wars/#world-war-ii-1941-1945 (accessed Feb. 4, 2026).
+[4]	 D. J. Trump, “Remarks by President Trump in State of the Union Address,” Trump White House Archives, Feb. 4, 2020. [Online]. Available: https://trumpwhitehouse.archives.gov/briefings-statements/remarks-president-trump-state-union-address-3/ (accessed Feb. 4, 2026).
+[5] 	J. R. Biden, “Read the full transcript of President Joe Biden's first speech to Congress,” USA Today, Apr. 28, 2021. [Online]. Available: https://www.usatoday.com/story/news/politics/2021/04/28/joe-bidens-speech-congress-read-full-transcript/4883244001/ (accessed Feb. 4, 2026).
+[6] 	J. R. Biden, “Address Before a Joint Session of the Congress on the State of the Union,” The American Presidency Project, Mar. 1, 2022. [Online]. Available: https://www.presidency.ucsb.edu/documents/address-before-joint-session-the-congress-the-state-the-union-28 (accessed Feb. 4, 2026).
+[7] 	J. R. Biden, “State of the Union 2023: Full Transcript of Biden’s Address,” The New York Times, Feb. 8, 2023. [Online]. Available: https://www.nytimes.com/2023/02/08/us/politics/biden-state-of-the-union-transcript.html (accessed Feb. 4, 2026).
+[8] 	U.S. Congress, House Committee on the Judiciary, “Hearing on the Report of the Special Counsel on the Investigation Into Unauthorized Removal, Retention, and Possession of Classified and Other Confidential Documents and Materials,” 118th Cong., Mar. 12, 2024. [Online]. Available: https://www.congress.gov/118/meeting/house/116942/documents/HHRG-118-JU00-20240312-SD001.pdf (accessed Feb. 4, 2026).
+[9] 	J. R. Biden, “Address Before a Joint Session of the Congress,” The American Presidency Project, Mar. 7, 2024. [Online]. Available: https://www.presidency.ucsb.edu/documents/address-before-joint-session-the-congress-4 (accessed Feb. 4, 2026).
