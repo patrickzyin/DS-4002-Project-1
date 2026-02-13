@@ -135,6 +135,9 @@ def combine_sentiment_results(results_list):
 def main():
     global sentiment_analyzer
     
+    import sys
+    csv_module.field_size_limit(sys.maxsize)
+    
     print("\nState of the Union Sentiment Analysis")
     print("Analyzing speeches from 1850 to 2025")
     print("Classification: >50% positive sentences = POSITIVE speech\n")
