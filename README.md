@@ -5,8 +5,14 @@ This repository contains an analysis of U.S. Presidential State of the Union add
 
 ## Section 1: Software and Platform 
 Software: Python 
-Packages: Transformers 
+Packages: 
+Transformers 
 PyTorch 
+Pandas
+Numpy
+Matplotlib
+Seaborn
+Scipy
 
 ## Section 2: A Map of Documentation 
 
