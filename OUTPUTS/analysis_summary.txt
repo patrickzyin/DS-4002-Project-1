@@ -1,0 +1,28 @@
+============================================================
+CRISIS VS NON-CRISIS SOTU SENTIMENT ANALYSIS
+============================================================
+
+Total speeches analyzed: 169
+Date range: 1850 - 2025
+
+DESCRIPTIVE STATISTICS:
+------------------------------------------------------------
+Crisis speeches: 82
+  Mean positive %: 55.83%
+  Std dev: 10.34%
+
+Non-crisis speeches: 87
+  Mean positive %: 56.45%
+  Std dev: 12.15%
+
+TWO-SAMPLE T-TEST:
+------------------------------------------------------------
+t-statistic: -0.7032
+p-value: 0.4829
+Significance level: alpha = 0.05
+
+RESULT: NOT STATISTICALLY SIGNIFICANT
+There is NO significant difference in sentiment between
+crisis and non-crisis speeches.
+
+============================================================
