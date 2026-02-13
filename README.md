@@ -29,28 +29,28 @@ pip install -r requirements.txt
 
 ## Section 2: A Map of Documentation 
 DS-4002-Project-1/
-│
-├── README.md                          # Project overview and instructions
-├── requirements.txt                   # Python package dependencies
-│
-├── DATA/
-│   └── SOTU_data_final.csv           # Dataset containing all SOTU speeches (1850-2025) # Columns: President, Year, Title, Text, is_crisis, crisis_name
-|    └── state_of_the_union_texts.csv  # Raw original dataset
-│                                      
-│
-├── SCRIPTS/
-│   ├── sentiment_model.py         # Main script: Analyzes sentiment of all speeches
-│   └── stat_analysis.py            # Secondary script: Performs statistical analysis on results and creates visualizations
-│
-└── OUTPUTS/
-    ├── sentiment_analysis_results.csv    # Results from sentiment analysis 
-    ├── analysis_summary.txt              # Statistical test results summary 
-    ├── boxplot_positive_sentiment.png    # Box plot comparing crisis vs non-crisis 
-    ├── histogram_positive_sentiment.png  # Histogram of sentiment distribution 
-    ├── pie_crisis_sentiment.png          # Pie chart for crisis speeches 
-    ├── pie_noncrisis_sentiment.png       # Pie chart for non-crisis speeches 
-    ├── boxplot_ratio.png                 # Box plot of positive/negative ratios 
-    └── timeseries_sentiment.png          # Time series showing sentiment trends
+|
+|-- README.md                          # Project overview and instructions
+|-- requirements.txt                   # Python package dependencies
+|
+|-- DATA/
+|   |-- SOTU_data_final.csv           # Dataset containing all SOTU speeches (1850-2025)
+|   |                                  # Columns: President, Year, Title, Text, is_crisis, crisis_name
+|   |-- state_of_the_union_texts.csv  # Raw original dataset
+|
+|-- SCRIPTS/
+|   |-- sentiment_model.py            # Main script: Analyzes sentiment of all speeches
+|   |-- stat_analysis.py              # Secondary script: Performs statistical analysis on results and creates visualizations
+|
+|-- OUTPUTS/
+    |-- sentiment_analysis_results.csv    # Results from sentiment analysis 
+    |-- analysis_summary.txt              # Statistical test results summary 
+    |-- boxplot_positive_sentiment.png    # Box plot comparing crisis vs non-crisis 
+    |-- histogram_positive_sentiment.png  # Histogram of sentiment distribution 
+    |-- pie_crisis_sentiment.png          # Pie chart for crisis speeches 
+    |-- pie_noncrisis_sentiment.png       # Pie chart for non-crisis speeches 
+    |-- boxplot_ratio.png                 # Box plot of positive/negative ratios 
+    |-- timeseries_sentiment.png          # Time series showing sentiment trends
 
 ## Section 3: Instructions for reproducing results
 
