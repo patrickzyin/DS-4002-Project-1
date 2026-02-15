@@ -5,6 +5,8 @@ import seaborn as sns
 from scipy import stats
 import os
 
+#After running stat_analysis.py, all results will be found in OUTPUTS folders as seperate pngs
+#For summary, read analysis_summary.txt
 
 # Load the sentiment analysis results
 def load_data():

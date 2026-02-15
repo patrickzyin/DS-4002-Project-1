@@ -6,6 +6,10 @@ import csv as csv_module
 import os
 
 
+#REQUIREMENTS: Please readme for more detailed instructions
+#Ensure packages are installed with requirements.txt
+#Run-time might take 10-15 minutes
+
 # Helper function to parse speech text
 def parse_speech_text(text):
     # Converts list-formatted text to a single string
@@ -221,7 +225,7 @@ def main():
         print(f"[{speech_num}/{len(unique_groups)}] {int(year)} - {president}")
         print(f"  {display_title[:70]}...")
         
-        # If multi-part speech, show all parts
+        # If multi-part, show all parts
         if len(speech_parts) > 1:
             print(f"  Combining {len(speech_parts)} parts:")
             for idx, part in speech_parts.iterrows():
